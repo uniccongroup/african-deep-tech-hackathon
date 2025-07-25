@@ -70,20 +70,6 @@ Response Example:
   "risk_level": "danger"
 }
 
-Folder Structure
-
-.
-
-├── app.py
-├── uploads/            
-├── templates/
-│   ├── index.html
-│   ├── result.html
-│   └── about.html
-├── runs/
-│   └── classify/train4/weights/best.pt
-└── Dockerfile
-
 
 🧪 Sample Test Image
 
