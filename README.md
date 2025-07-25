@@ -20,9 +20,13 @@ Features
 
 3. Install Requirements (Python 3.8+)
 
+
     python -m venv venv
+   
     source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
     pip install -r requirements.txt
+
 
 
 
