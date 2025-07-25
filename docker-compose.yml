@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  malaria-detection:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./runs:/app/runs
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=your-production-secret-key
+    restart: unless-stopped

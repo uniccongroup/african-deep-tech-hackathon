@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-container">
+    <div class="hero-section">
+        <h1 class="hero-title">About Omeife Dx: Smartphone-Based AI Diagnostics for Malaria</h1>
+        <p class="hero-subtitle">Advanced deep learning for medical diagnosis</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="result-card">
+                <h3><i class="fas fa-microscope"></i> How It Works</h3>
+                <p>Our AI system uses YOLOv8, a state-of-the-art deep learning model, trained on thousands of blood cell images to detect malaria parasites with high accuracy.</p>
+                
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>High Accuracy:</strong> 96.4% overall accuracy</li>
+                    <li><strong>Fast Analysis:</strong> Results in under 1 second</li>
+                    <li><strong>High Sensitivity:</strong> 97.8% detection rate for infected cells</li>
+                    <li><strong>User-Friendly:</strong> Simple drag-and-drop interface</li>
+                </ul>
+            </div>
+
+            <div class="result-card">
+                <h3><i class="fas fa-chart-bar"></i> Performance Metrics</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Model Performance</h5>
+                        <ul>
+                            <li>Accuracy: 96.4%</li>
+                            <li>Sensitivity: 97.8%</li>
+                            <li>Specificity: 95.1%</li>
+                            <li>F1-Score: 96.3%</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Training Data</h5>
+                        <ul>
+                            <li>Total Images: 27,558</li>
+                            <li>Training Set: 19,290</li>
+                            <li>Validation Set: 5,512</li>
+                            <li>Test Set: 2,756</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3><i class="fas fa-shield-alt"></i> Important Disclaimers</h3>
+                <div class="alert alert-warning">
+                    <h5>Medical Use Only</h5>
+                    <p>This system is designed to assist medical professionals and should not be used as a substitute for professional medical diagnosis.</p>
+                </div>
+                
+                <div class="alert alert-info">
+                    <h5>Always Consult Healthcare Providers</h5>
+                    <p>Final diagnosis and treatment decisions should always be made by qualified healthcare professionals.</p>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3><i class="fas fa-code"></i> Technical Details</h3>
+                <ul>
+                    <li><strong>Model Architecture:</strong> YOLOv8 Classification (Nano)</li>
+                    <li><strong>Input Size:</strong> 224x224 pixels</li>
+                    <li><strong>Framework:</strong> PyTorch with Ultralytics</li>
+                    <li><strong>Training Time:</strong> ~3 hours on Tesla T4</li>
+                    <li><strong>Model Size:</strong> ~6MB</li>
+                    <li><strong>Supported Formats:</strong> PNG, JPG, JPEG, GIF, BMP, TIFF</li>
+                </ul>
+            </div>
+
+            <div class="result-card">
+                <h3><i class="fas fa-users"></i> For Healthcare Professionals</h3>
+                <p>This tool is designed to assist healthcare workers in resource-limited settings where expert microscopy may not be readily available.</p>
+                
+                <h5>Recommended Use Cases:</h5>
+                <ul>
+                    <li>Initial screening in remote clinics</li>
+                    <li>Quality control for microscopy results</li>
+                    <li>Training aid for medical students</li>
+                    <li>Research and epidemiological studies</li>
+                </ul>
+                
+                <div class="alert alert-info">
+                    <strong>Note:</strong> This system complements but does not replace traditional microscopy and clinical judgment.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

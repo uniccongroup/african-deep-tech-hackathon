@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-container">
+    <div class="hero-section">
+        <h1 class="hero-title">
+            <i class="fas fa-microscope"></i> Omeife Dx: AI Diagnostics for Malaria
+        </h1>
+        <p class="hero-subtitle">
+            Advanced AI-powered system for rapid malaria diagnosis from blood cell images
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <form id="uploadForm" action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+                <div id="uploadArea" class="upload-area">
+                    <div id="uploadText">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h4>Upload Blood Cell Image</h4>
+                        <p>Drag and drop an image here or click to select</p>
+                        <p><small>Supported formats: PNG, JPG, JPEG, GIF, BMP, TIFF</small></p>
+                    </div>
+                    <input type="file" id="fileInput" name="file" accept="image/*" style="display: none;" required>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i> Analyze Image
+                    </button>
+                </div>
+            </form>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <h4>Analyzing Image...</h4>
+                <p>Please wait while our AI processes your image</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="stats-card">
+                <i class="fas fa-bullseye stats-icon text-success"></i>
+                <h4>96.4%</h4>
+                <p>Accuracy</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stats-card">
+                <i class="fas fa-clock stats-icon text-info"></i>
+                <h4>&lt; 1 sec</h4>
+                <p>Analysis Time</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stats-card">
+                <i class="fas fa-shield-alt stats-icon text-warning"></i>
+                <h4>97.8%</h4>
+                <p>Sensitivity</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <strong>Important:</strong> This AI system is designed to assist medical professionals. 
+                Always consult with healthcare providers for proper diagnosis and treatment.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

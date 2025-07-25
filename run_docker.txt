@@ -1,0 +1,14 @@
+# Step 1: Build the Docker image
+docker build -t malaria-hackathon:latest .
+
+# Step 2: Run the container
+docker run -d -p 5000:5000 --name malaria-app malaria-hackathon:latest
+
+# Step 3: Check that the container is running
+docker ps
+
+# Step 4: Access the app in your browser
+# If you're on the same machine, open:
+http://localhost:5000
+
+

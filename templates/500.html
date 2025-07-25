@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - Malaria Detection System{% endblock %}
+
+{% block content %}
+<div class="main-container">
+    <div class="hero-section">
+        <h1 class="hero-title">
+            <i class="fas fa-exclamation-circle text-danger"></i> 500
+        </h1>
+        <p class="hero-subtitle">Internal Server Error</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="result-card text-center">
+                <h3><i class="fas fa-tools"></i> Something Went Wrong</h3>
+                <p>We're experiencing technical difficulties. Please try again later.</p>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>If the problem persists:</strong><br>
+                    The AI model may not be loaded properly, or there might be a server configuration issue.
+                </div>
+                
+                <div class="mt-4">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">
+                        <i class="fas fa-refresh"></i> Try Again
+                    </a>
+                    <a href="{{ url_for('about') }}" class="btn btn-outline-primary ms-2">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
