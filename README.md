@@ -1,4 +1,3 @@
-
 African Deep Tech Hackathon – Malaria Detection App 🦟
 
 Features
