@@ -1,3 +1,4 @@
+
 African Deep Tech Hackathon – Malaria Detection App 🦟
 
 Features
@@ -13,9 +14,11 @@ Features
 1. Clone the Repository
 
     git clone https://github.com/uniccongroup/african-deep-tech-hackathon.git
+   
+   
     cd african-deep-tech-hackathon
 
-2. Install Requirements (Python 3.8+)
+3. Install Requirements (Python 3.8+)
 
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -70,6 +73,7 @@ Response Example:
 Folder Structure
 
 .
+
 ├── app.py
 ├── uploads/            
 ├── templates/
@@ -79,6 +83,7 @@ Folder Structure
 ├── runs/
 │   └── classify/train4/weights/best.pt
 └── Dockerfile
+
 
 🧪 Sample Test Image
 
