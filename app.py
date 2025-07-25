@@ -1,5 +1,3 @@
-# Flask App Without SECRET_KEY (Modified Version)
-
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from werkzeug.utils import secure_filename
 import os
