@@ -428,30 +428,3 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-## Key Training Tips
-
-1. **Data Quality**: Ensure your images are of good quality and properly labeled
-2. **Data Augmentation**: Use appropriate augmentation to improve model generalization
-3. **Model Size**: Start with yolov8n (nano) for faster training, then try larger models if needed
-4. **Learning Rate**: Start with 0.001 and adjust based on training progress
-5. **Early Stopping**: Use patience parameter to prevent overfitting
-6. **Validation**: Always validate during training to monitor performance
-7. **Class Balance**: Ensure balanced dataset or use class weights if imbalanced
-
-## Expected Performance
-
-With proper training, you should expect:
-- **Training Time**: 1-3 hours depending on dataset size and hardware
-- **Accuracy**: 95%+ on malaria cell classification
-- **Inference Speed**: Real-time prediction capability
-- **Model Size**: 5-50MB depending on model variant
-
-## Next Steps
-
-1. Run the dataset preparation script
-2. Start training with the provided configuration
-3. Monitor training progress and adjust parameters as needed
-4. Evaluate model performance on test set
-5. Deploy the model for real-world use
-
-Good luck with your malaria classification project!
