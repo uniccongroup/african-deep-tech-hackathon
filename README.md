@@ -1,5 +1,5 @@
 
-African Deep Tech Hackathon – Malaria Detection App 🦟
+African Deep Tech Hackathon – Malaria Detection App
 
 Features
 
@@ -9,7 +9,7 @@ Features
 - API access for integration
 - Docker support for easy deployment
 
-🚀 Getting Started
+Getting Started
 
 1. Clone the Repository
 
@@ -42,7 +42,7 @@ You can change the path in the MODEL_PATH variable in app.py if needed.
 
 Visit http://localhost:5000 to use the web interface.
 
-📦 Using Docker
+Using Docker
 
 1. Build Docker Image
 
@@ -54,7 +54,7 @@ Visit http://localhost:5000 to use the web interface.
 
 Visit http://localhost:5000
 
-🧠 API Endpoint
+API Endpoint
 
 POST /api/predict
 
@@ -75,10 +75,7 @@ Response Example:
 }
 
 
-🧪 Sample Test Image
+Sample Test Image
 
 You can use test cell images from the Cell Images for Detecting Malaria dataset:
-
-
-🤝 Contributors
 
