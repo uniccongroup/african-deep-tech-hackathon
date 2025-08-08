@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from werkzeug.utils import secure_filename
+import torch
 import os
 import cv2
 import numpy as np
@@ -7,6 +8,7 @@ from PIL import Image
 import base64
 import io
 from ultralytics import YOLO
+import ultralytics.nn.tasks as utasks
 import time
 from datetime import datetime
 import logging
@@ -30,11 +32,13 @@ MODEL_PATH = 'runs/classify/train4/weights/best.pt'
 model = None
 
 def load_model():
-    """Load the YOLOv8 model with error handling"""
+    """Load the YOLOv8 model with safe allowlist for classification models"""
     global model
     try:
         if Path(MODEL_PATH).exists():
+            torch.serialization.add_safe_globals([utasks.ClassificationModel])
             model = YOLO(MODEL_PATH)
+
             logger.info(f"Model loaded successfully from {MODEL_PATH}")
             return True
         else:
@@ -43,6 +47,7 @@ def load_model():
     except Exception as e:
         logger.error(f"Error loading model: {e}")
         return False
+
 
 # Initialize model on startup
 model_loaded = load_model()
@@ -191,3 +196,4 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
